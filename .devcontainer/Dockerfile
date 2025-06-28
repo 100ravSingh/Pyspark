@@ -1,15 +1,15 @@
-FROM python:3.10-slim
+FROM python:3.10
 
-# Install Java and tools
+# Install Java
 RUN apt-get update && \
-    apt-get install -y openjdk-11-jdk wget curl bash git && \
+    apt-get install -y openjdk-11-jdk wget curl && \
     apt-get clean
 
-# Java env
+# Set environment variables for Java
 ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 ENV PATH="$JAVA_HOME/bin:$PATH"
 
-# Install Apache Spark
+# Install Spark
 ENV SPARK_VERSION=3.5.1
 ENV HADOOP_VERSION=3
 ENV SPARK_HOME=/opt/spark
@@ -20,5 +20,5 @@ RUN wget https://downloads.apache.org/spark/spark-${SPARK_VERSION}/spark-${SPARK
     mv /opt/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION} $SPARK_HOME && \
     rm spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz
 
-# Install Python packages (including Jupyter)
+# Install pip packages
 RUN pip install --no-cache-dir pyspark notebook ipykernel
