@@ -1,6 +1,15 @@
-# ⚡ PySpark in GitHub Codespaces
+# ⚡ PySpark Tutorial
 
-This project sets up a working **PySpark development environment** inside **GitHub Codespaces**, enabling you to write, run, and experiment with Spark directly from your browser.
+This project is a hands-on **PySpark tutorial** designed to run inside **GitHub Codespaces**. It helps you learn and practice PySpark by walking through real examples — from basic DataFrame operations to reading/writing files and setting up your development environment.
+
+---
+
+## 📘 Lessons
+
+| Lesson | Description                                                                 |
+|--------|-----------------------------------------------------------------------------|
+| 1️⃣     | [Lesson 1](./Lesson-1/README.md) – PySpark Basics — SparkSession, DataFrame ops, CSV I/O |
+| 2️⃣     | [Lesson 2](./Lesson-2/README.md) – Aggregations and GroupBy — summary stats, multi-level grouping, CSV output |
 
 ---
 
@@ -54,16 +63,11 @@ This project uses a **`.devcontainer`** configuration to set up:
 
 ```bash
 python -c "import pyspark; print(pyspark.__version__)"
+```
 
 To Run
 ```bash
 python <filename>.py
-
-
-## 📘 Lessons
-
-| Lesson | Description                                                                 |
-|--------|-----------------------------------------------------------------------------|
-| 1️⃣     | [Lesson 1](./Lesson-1/README.md) – PySpark Basics — SparkSession, DataFrame ops, CSV I/O |
+```
 
 ---
