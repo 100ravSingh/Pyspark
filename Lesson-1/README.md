@@ -120,3 +120,13 @@ Lesson-1/output/output.csv/
 - Do not open the `output.csv` folder expecting a `.csv` file directly — Spark writes partitioned output.
 
 ---
+
+## 🧭 Next Up
+
+Lesson 2 will cover:
+- Aggregations and `groupBy()`
+- Computing summary statistics per category
+- Saving transformed data to CSV
+- Multi-level grouping (e.g., by category and product)
+
+---
